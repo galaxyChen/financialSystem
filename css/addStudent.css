@@ -1,0 +1,375 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+p
+{
+	font-family:"Microsoft YaHei";
+}
+
+body
+{
+	width: 980px;
+	height: 2000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header
+{
+	height: 160px;
+	box-shadow: 0 0 2px;
+}
+
+#logo
+{
+	position: relative;
+	left: 64px;
+	top: 32px;
+	height: 96px;
+	width: 96px;
+	float: left;
+}
+
+#block
+{
+	font-family: none;
+	position: relative;
+	top: 60px;
+	left: 128px;
+	height: 40px;
+	font-size: 40px;
+	float: left;
+}
+
+#title
+{
+	font-size: 31px;
+	position: relative;
+	top: 60px;
+	left: 192px;
+	float: left;
+}
+
+#main
+{
+	height: 1744px;
+}
+
+#user
+{
+	height: 96px;
+	background-color: #dadde7;
+}
+
+#usertx
+{
+	width: 64px;
+	height: 64px;
+	position: relative;
+	top: 10px;
+	left: 32px;
+	float: left;
+}
+
+#welcome
+{
+	float: left;
+	position: relative;
+	top: 16px;
+	left: 48px;
+	font-size: 16px;
+}
+
+#nav
+{
+	float: left;
+	width: 240px;
+	height: 100%;
+	background-color: #4e5b8f;
+}
+
+.navbox
+{
+	height: 64px;
+	background-color: #4e5b8f;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+}
+
+.navtext
+{
+	position: relative;
+	top:16px;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-family:"Microsoft YaHei";
+}
+
+#show
+{
+	float: left;
+	background-color: #dadde7;
+	height: 100%;
+	width: 740px;
+}
+
+#now
+{
+	background-color: #323955;
+}
+
+#nowLine
+{
+	width: 8px;
+	background-color: #1ac2f3;
+	float: right;
+	height: 100%;
+}
+
+a:hover
+{
+	background-color: #323955;
+}
+
+
+.navbox:hover
+{
+	background-color: #323955;
+}
+
+hr
+{
+	float: left;
+	color: rgba(0,0,0,0.2);
+}
+
+
+#addTitle
+{
+	height: 73px;
+}
+
+#titleText
+{
+	font-size: 25px;
+	position: relative;
+	top: 16px;
+	left: 64px;
+	float: left;
+}
+
+#titleLine
+{
+	width: 400px;
+	position: relative;
+	top: 30px;
+	left: 70px;
+}
+
+.personLine
+{
+	width: 16px;
+	position: relative;
+	top: 15px;
+}
+
+.p_base
+{
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 20px;
+	float: left;
+}
+
+#person
+{
+	height: 26px;
+	position: relative;
+	left: 64px;
+}
+
+.inputbox
+{
+	border: none;
+	font-size: 20px;
+	border-radius: 2px;
+	height: 32px;
+	width: 240px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#inperson
+{
+	position: relative;
+	top: 16px;
+	left: 128px;
+}
+
+
+.inttext
+{
+	font-size: 16px;
+	float: left;
+	position: relative;
+	top: 8px;
+	margin-right: 15px;
+}
+
+.inparea
+{
+	margin-bottom: 16px;
+	height: 32px;
+}
+
+#family
+{
+	height: 26px;
+	position: relative;
+	left: 64px;
+	top: 16px;
+}
+
+#infamily
+{
+	position: relative;
+	top: 32px;
+	left: 128px;
+}
+
+#money
+{
+	height: 26px;
+	position: relative;
+	left: 64px;
+	top: 32px;
+}
+
+.message
+{
+	width: 540px;
+	position: relative;
+	left: 128px;
+	top: 48px;
+	background-color: white;
+	border-radius: 2px;
+	border-collapse: collapse;
+	box-shadow: 0 2px 4px;
+}
+
+tr
+{
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: rgba(0,0,0,0.12);
+}
+
+td
+{
+	height: 48px;
+
+}
+
+.zero
+{
+	width: 96px;
+}
+
+.first
+{
+	width: 128px;
+}
+
+.second
+{
+	width: 128px;
+}
+
+
+.third
+{
+	width: 188px;
+}
+
+.inputmoney
+{
+	border-width: 1px;
+	font-size: 20px;
+	border-radius: 2px;
+	height: 32px;
+	width: 100px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+option
+{
+	height: 29px;
+	width: 80px;
+}
+
+select
+{
+	border: none;
+	border-radius: 2px;
+	font-size: 16px;
+}
+
+#note
+{
+	height: 26px;
+	position: relative;
+	top: 64px;
+	left: 64px;
+}
+
+#innote
+{
+	position: relative;
+	top: 78px;
+	left: 128px;
+
+}
+.note
+{
+	border-radius: 2px;
+	height: 96px;
+	width: 360px;
+	font-size: 20px;
+	background-color: rgba(255,255,255,0.5);
+	resize: none;
+}
+
+#submit
+{
+	position: relative;
+	top: 128px;
+	left: 480px;
+	width: 96px;
+	height: 32px;
+	background-color: rgba(78,91,143,0.6);
+	border-radius: 2px;
+	font-size: 16px;
+	color: white;
+	font-family: "Microsoft YaHei";
+}
+
+.moneytext
+{
+	margin-left: 20px;
+}
+
+#stype
+{
+	position: relative;
+	top: 16px;
+}
+
+#type
+{
+	margin-left: 20px;
+}

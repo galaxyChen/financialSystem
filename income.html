@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title>收入管理</title>
+	<link rel="stylesheet" type="text/css" href="css/income.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<div id='header' class="header">
+		<img id='logo' class='logo' src="img/logo.jpg">
+		<p id='block'>|</p>
+		<p id='title'>收入管理</p>
+	</div>
+	<div id='main' class="main">
+		<div id='user' class='user'>
+			<img id='usertx' src="img/user.jpg">
+			<div id='welcome'>
+				<p >欢迎回来</p>
+				<p id='admin'>系统管理员</p>
+			</div>
+		</div>
+		<div id='nav'>
+			<div class="navbox" ><a class="navtext" href="#">基本信息</a></div>
+			<div  class="navbox" ><a class="navtext" href="student.html">学生管理</a></div>
+			<div class="navbox"><a class="navtext" href="#">班级管理</a></div>
+			<div class="navbox"><a class="navtext" href="#">支出管理</a></div>
+			<div class="navbox" id='now'><a class="navtext" href="income.html">收入管理</a><div id="nowLine"></div></div>
+			<div class="navbox"><a class="navtext" href="#">结余管理</a></div>
+		</div>
+		<div id='show' class="show">
+			<div id='search' class='search'>
+				
+					<div id="findName">
+						<input id='s_name'  onkeypress="name2()"> 
+						<img id='search_img' src="img/search.png" onclick="name1()">
+					</div>
+					<div id='s_button'>
+					<button id='add' class="s_button" onclick="goAdd()">添加</button>
+					<button id='delete'class='s_button' type="submit">删除</button>
+					</div>
+			</div>
+			<form method="post" action="controller/delete.php">
+			<table id='message' class="message">
+			<tr>
+			<td class='zero'></td>
+			<td class='first'>名字</td>
+			<td class='second'>
+			<select id='type'>
+				<option value="0">类别</option>
+				<option value="1">保教费</option>
+				<option value="2">代收费</option>
+				<option value="3">伙食费</option>
+				<option value="4">其他</option>
+
+			</select>
+			</td>
+			<td class='third' id='money'>
+				金额
+			</td>
+			<td class="forth" id='date'>时间</td>
+			</tr>
+			</table>
+			<table id="detail" class="message">
+			</table>
+			</form>
+			<div id='page' class="page">
+			<p class='pagetext'>第</p>
+			<input id='showpage' value="1" name="1" onkeypress="skip(this.name)">
+			<p class='pagetext'>页</p>
+			<p class='pagetext'>|</p>
+			<p class='pagetext'>共</p>
+			<p class='pagetext' id='total'></p>
+			<p class='pagetext'>页</p>
+			<button id='last' onclick="page(0)">上一页</button>
+			<p id='pageblock' class='pagetext'>|</p>
+			<button id='next' onclick="page(1)">下一页</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/income.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+p
+{
+	font-family:"Microsoft YaHei";
+}
+
+body
+{
+	width: 900px;
+	height: 2000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header
+{
+	height: 160px;
+	box-shadow: 0 0 2px;
+}
+
+#logo
+{
+	position: relative;
+	left: 64px;
+	top: 32px;
+	height: 96px;
+	width: 96px;
+	float: left;
+}
+
+#block
+{
+	font-family: none;
+	position: relative;
+	top: 60px;
+	left: 128px;
+	height: 40px;
+	font-size: 40px;
+	float: left;
+}
+
+#title
+{
+	font-size: 31px;
+	position: relative;
+	top: 60px;
+	left: 192px;
+	float: left;
+}
+
+#main
+{
+	height: 1744px;
+}
+
+#user
+{
+	height: 96px;
+	background-color: #dadde7;
+}
+
+#usertx
+{
+	width: 64px;
+	height: 64px;
+	position: relative;
+	top: 10px;
+	left: 32px;
+	float: left;
+}
+
+#welcome
+{
+	float: left;
+	position: relative;
+	top: 16px;
+	left: 48px;
+	font-size: 16px;
+}
+
+#nav
+{
+	float: left;
+	width: 160px;
+	height: 100%;
+	background-color: #4e5b8f;
+}
+
+.navbox
+{
+	height: 64px;
+	background-color: #4e5b8f;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+}
+
+.navtext
+{
+	position: relative;
+	top:16px;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-family:"Microsoft YaHei";
+}
+
+#show
+{
+	float: left;
+	background-color: #dadde7;
+	height: 100%;
+	width: 740px;
+}
+
+#now
+{
+	background-color: #323955;
+}
+
+#nowLine
+{
+	width: 8px;
+	background-color: #1ac2f3;
+	float: right;
+	height: 100%;
+}
+
+a:hover
+{
+	background-color: #323955;
+}
+
+#search
+{
+	position: relative;
+	top: 16px;
+	left: 60px;
+	height: 34px;
+}
+
+#s_name
+{
+	height: 32px;
+	width: 140px;
+	background-color: #dadde7;
+	font-size: 30px;
+	border: none;
+}
+
+#findName
+{
+	border: 1px solid black;
+	width: 180px;
+	float: left;
+}
+
+#s_button
+{
+	float: left;
+}
+.s_button
+{
+	width: 96px;
+	height: 32px;
+	border-radius: 5px;
+	float: left;
+	font-family:"Microsoft YaHei";
+	color: white;
+	font-size: 16px;
+	border: none;
+}
+
+#add
+{
+	position: relative;
+	left: 30px;
+	background-color: #32b16c;
+}
+
+#delete
+{
+	position: relative;
+	left: 40px;
+	background-color: #ed424f;
+}
+
+#message
+{
+	width: 560px;
+	position: relative;
+	left: 60px;
+	top: 32px;
+	background-color: white;
+	border-radius: 5px;
+	border-collapse: collapse;
+	box-shadow: 0 2px 4px;
+}
+
+tr
+{
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: rgba(0,0,0,0.12);
+}
+
+td
+{
+	height: 48px;
+
+}
+
+.zero
+{
+	width: 48px;
+}
+
+.first
+{
+	width: 196px;
+}
+
+.second
+{
+	width: 192px;
+}
+
+.t_third
+{
+	width: 80px;
+}
+
+.t_second
+{
+	width: 192px;
+}
+
+.third
+{
+	width: 80px;
+	padding-left: 2px;
+}
+
+.forth
+{
+	width: 48px;
+}
+
+#page
+{
+	position: relative;
+	left: 180px;
+	top: 50px;
+}
+.pagetext
+{
+	display: inline;
+}
+
+#showpage
+{
+	width: 32px;
+	height: 16px;
+	border: none;
+	border-radius: 5px;
+}
+
+#last
+{
+	position: relative;
+	left: 50px;
+	margin-right: 16px;
+	background-color: #dadde7;
+	border: none;
+}
+
+#pageblock
+{
+	position: relative;
+	left: 50px;
+}
+
+#next
+{
+	position: relative;
+	left: 50px;
+	margin-left: 16px;
+	background-color: #dadde7;
+	border:none;
+}
+
+button
+{
+	font-family:"Microsoft YaHei";
+	font-size: 16px;
+}
+
+.detail:hover
+{
+	background-color: #e0e0e0;
+}
+
+.navbox:hover
+{
+	background-color: #323955;
+}
+
+option
+{
+	height: 29px;
+	width: 80px;
+}
+
+select
+{
+	border: none;
+	font-size: 16px;
+}
+
+.testp
+{
+	padding-left: 4px;
+	font-family: none;
+}

@@ -1,0 +1,41 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+p
+{
+	text-align: center;
+	position: relative;
+	right: auto;
+	left: auto;
+	font-size: 50px;
+	font-family: "Microsoft YaHei";
+}
+
+
+.item_2
+{
+	visibility: hidden;
+}
+
+.play .item_2
+{
+	-webkit-animation: fadeInRight 1s ease-out;
+	-webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+  	visibility: visible;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}

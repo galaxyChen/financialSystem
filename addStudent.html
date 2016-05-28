@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>学生管理</title>
+	<link rel="stylesheet" type="text/css" href="css/addStudent.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<div id='header' class="header">
+		<img id='logo' class='logo' src="img/logo.jpg">
+		<p id='block'>|</p>
+		<p id='title'>学生管理</p>
+	</div>
+	<div id='main' class="main">
+		<div id='user' class='user'>
+			<img id='usertx' src="img/user.jpg">
+			<div id='welcome'>
+				<p >欢迎回来</p>
+				<p id='admin'>系统管理员</p>
+			</div>
+		</div>
+		<div id='nav'>
+			<div class="navbox" ><a class="navtext" href="#">基本信息</a></div>
+			<div  class="navbox" id='now'><a class="navtext" href="student.html">学生管理</a><div id="nowLine"></div></div>
+			<div class="navbox"><a class="navtext" href="#">班级管理</a></div>
+			<div class="navbox"><a class="navtext" href="#">支出管理</a></div>
+			<div class="navbox"><a class="navtext" href="income.html">收入管理</a></div>
+			<div class="navbox"><a class="navtext" href="#">结余管理</a></div>
+		</div>
+		<div id='show' class="show">
+			<div id='addTitle'>
+				<p id='titleText'>添加学生信息</p>
+				<hr id='titleLine'>
+			</div>
+			<form id='student' method="post" action="controller/add.php">
+				<div id='person' class="infarea">
+					<hr class="personLine">
+					<p class='p_base'>个人信息</p>
+					<hr class="personLine">
+				</div>
+				<div id="inperson">
+				<div class="inparea">
+				<p class="inttext">姓名</p>
+				<input class="inputbox" id='sname' name='name' onchange="setNames(this.value)"></input>
+				</div>
+				<div class="inparea">
+				<p class="inttext" >性别</p>
+				<select id='sex' name='sex'>
+					<option value="male">男</option>
+					<option value="female">女</option>
+				</select>
+				</div>
+				<div class="inparea">
+				<p class="inttext">班级</p>
+				<input class="inputbox"id='class' name="class" onblur="findClass()"></input>
+				</div>
+				<div class="inparea">
+				<p class="inttext">出生日期</p>
+				<input class="inputbox"id='birth' name="birth" placeholder="格式：2015-01-01" onchange="checkDate(this.value)"></input>
+				</div>
+				</div>
+				<div id='family'>
+					<hr class="personLine">
+					<p class='p_base'>家庭成员</p>
+					<hr class="personLine">
+				</div>
+				<div id="infamily">
+				<div class="inparea">
+				<p class="inttext">父亲姓名</p>
+				<input class="inputbox" id='fname' name="fname"></input>
+				</div>
+				<div class="inparea">
+				<p class="inttext" >父亲电话</p>
+				<input class="inputbox" id='fphone' name="fphone"></input>
+				</div>
+				<div class="inparea">
+				<p class="inttext">母亲姓名</p>
+				<input class="inputbox"id='mname' name="mname"></input>
+				</div>
+				<div class="inparea">
+				<p class="inttext">母亲电话</p>
+				<input class="inputbox"id='mphone' name="mphone"></input>
+				</div>
+				</div>
+				<div id='money'>
+					<hr class="personLine">
+					<p class='p_base'>缴费情况</p>
+					<hr class="personLine">
+				</div>
+				<div id='inmoney'>
+				<table class="message">
+				<tr>
+					<td class="zero"></td>
+					<td class="first">应缴</td>
+					<td class="second">实缴</td>
+					<td class="third">时间</td>
+				</tr>
+				<tr>
+					<td class="zero"><p class='moneytext'>保教费</p></td>
+					<td class="first"><input class="inputmoney" id="bjf_r" name="bjf_r"></input></td>
+					<td class="second"><input class="inputmoney" id="bjf_g" name="bjf_g"></input></td>
+					<td class="third">
+						<select id="bjf_b" name="bjf_b">
+							<option value="0">开始</option>
+							<option value="1">1月</option>
+							<option value="2">2月</option>
+							<option value="3">3月</option>
+							<option value="4">4月</option>
+							<option value="5">5月</option>
+							<option value="6">6月</option>
+							<option value="7">7月</option>
+							<option value="8">8月</option>
+							<option value="9">9月</option>
+							<option value="10">10月</option>
+							<option value="11">11月</option>
+							<option value="12">12月</option>
+						</select>
+						至
+						<select id="bjf_e" name="bjf_e">
+							<option value="0">结束</option>
+							<option value="1">1月</option>
+							<option value="2">2月</option>
+							<option value="3">3月</option>
+							<option value="4">4月</option>
+							<option value="5">5月</option>
+							<option value="6">6月</option>
+							<option value="7">7月</option>
+							<option value="8">8月</option>
+							<option value="9">9月</option>
+							<option value="10">10月</option>
+							<option value="11">11月</option>
+							<option value="12">12月</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="zero"><p class='moneytext'>代收费</p></td>
+					<td class="first"><input class="inputmoney" id="dsf_r" name="dsf_r"></input></td>
+					<td class="second"><input class="inputmoney" id="dsf_g" name="dsf_g"></input></td>
+					<td class="third">
+						<select id="dsf_b" name="dsf_b">
+							<option value="0">开始</option>
+							<option value="1">1月</option>
+							<option value="2">2月</option>
+							<option value="3">3月</option>
+							<option value="4">4月</option>
+							<option value="5">5月</option>
+							<option value="6">6月</option>
+							<option value="7">7月</option>
+							<option value="8">8月</option>
+							<option value="9">9月</option>
+							<option value="10">10月</option>
+							<option value="11">11月</option>
+							<option value="12">12月</option>
+						</select>
+						至
+						<select id="dsf_e" name="dsf_e">
+							<option value="0">结束</option>
+							<option value="1">1月</option>
+							<option value="2">2月</option>
+							<option value="3">3月</option>
+							<option value="4">4月</option>
+							<option value="5">5月</option>
+							<option value="6">6月</option>
+							<option value="7">7月</option>
+							<option value="8">8月</option>
+							<option value="9">9月</option>
+							<option value="10">10月</option>
+							<option value="11">11月</option>
+							<option value="12">12月</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="zero"><p class='moneytext'>伙食费</p></td>
+					<td class="first"><input class="inputmoney" id="hsf_r" name="hsf_r"></input></td>
+					<td class="second"><input class="inputmoney" id="hsf_g" name="hsf_g"></input></td>
+					<td class="third">
+						<select id="hsf_b" name="hsf_b">
+							<option value="0">开始</option>
+							<option value="1">1月</option>
+							<option value="2">2月</option>
+							<option value="3">3月</option>
+							<option value="4">4月</option>
+							<option value="5">5月</option>
+							<option value="6">6月</option>
+							<option value="7">7月</option>
+							<option value="8">8月</option>
+							<option value="9">9月</option>
+							<option value="10">10月</option>
+							<option value="11">11月</option>
+							<option value="12">12月</option>
+						</select>
+						至
+						<select id="hsf_e" name="hsf_e">
+							<option value="0">结束</option>
+							<option value="1">1月</option>
+							<option value="2">2月</option>
+							<option value="3">3月</option>
+							<option value="4">4月</option>
+							<option value="5">5月</option>
+							<option value="6">6月</option>
+							<option value="7">7月</option>
+							<option value="8">8月</option>
+							<option value="9">9月</option>
+							<option value="10">10月</option>
+							<option value="11">11月</option>
+							<option value="12">12月</option>
+						</select>
+					</td>
+				</tr>
+				</table>
+				</div>
+			<div id='note'>
+					<hr class="personLine">
+					<p class='p_base'>备注</p>
+					<hr class="personLine">
+			</div>
+			<div id='innote'>
+			<textarea class="note" placeholder="例如收费细则" name="note"></textarea>
+			<div id='stype'>
+			<p class='p_base'>学生类型</p>
+			<select id='type' name="type">
+				<option value="0">普通生</option>
+				<option value="1">特殊生</option>
+			</select>
+			</div>
+			</div>
+			<button id="submit" name='submit' onclick="return check()">提交</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/addStudent.js"></script>
+	<script src="js/check.js"></script>
+</body>
+</html>

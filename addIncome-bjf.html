@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>收入管理</title>
+	<link rel="stylesheet" type="text/css" href="css/addIncome.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<div id='header' class="header">
+		<img id='logo' class='logo' src="img/logo.jpg">
+		<p id='block'>|</p>
+		<p id='title'>收入管理</p>
+	</div>
+	<div id='main' class="main">
+		<div id='user' class='user'>
+			<img id='usertx' src="img/user.jpg">
+			<div id='welcome'>
+				<p >欢迎回来</p>
+				<p id='admin'>系统管理员</p>
+			</div>
+		</div>
+	<div id='nav'>
+			<div class="navbox" ><a class="navtext" href="#">基本信息</a></div>
+			<div  class="navbox"><a class="navtext" href="student.html">学生管理</a></div>
+			<div class="navbox"><a class="navtext" href="#">班级管理</a></div>
+			<div class="navbox"><a class="navtext" href="#">支出管理</a></div>
+			<div class="navbox" id='now'><a class="navtext" href="income.html">收入管理</a><div id="nowLine"></div></div>
+			<div class="navbox"><a class="navtext" href="#">结余管理</a></div>
+		</div>
+		<div id='show' class="show">
+			<div id='addTitle'>
+				<p id='titleText'>添加收入</p>
+				<hr id='titleLine'>
+			</div>
+		<div id=basic name=basic>
+		<div id='person' class="infarea">
+					<hr class="personLine">
+					<p class='p_base'>保教费信息</p>
+					<hr class="personLine">
+				</div>
+		<div id='inincome'>
+		<div class="inparea" id='inname'>
+		<p class="inttext">姓名</p>
+		<input class="inputbox" id='name' onkeyup="findStudent()">
+		<p class="inttext" id='state'></p>
+		</div>
+		<div class="inparea">
+		<p class="inttext">目前欠费金额</p>
+		<p class="inttext" id='owe'>
+		</div>
+		<div class="inparea">
+		<p class="inttext">本次缴纳金额</p>
+		<input class="inputbox" id='money'>
+		</div>
+		<div class="inparea">
+		<p class="inttext">缴费时间</p>
+		<input class="inputbox" id='time'>
+		</div>
+		
+		<p class="inttext">详细说明</p>
+		<textarea id='note' class="note"></textarea>
+		<div>
+		<button id='next' class="submit" onclick="submit()">提交</button>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/money.js"></script>
+	<script src="js/bjf.js"></script>
+</body>
+</html>

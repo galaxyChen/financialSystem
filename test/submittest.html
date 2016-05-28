@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="test.php" method="post" >
+	<input id="test" type="text" name='submit'> </input>
+	<input id="submit" type="submit"></input>
+</form>
+<script type="text/javascript">
+	var test=document.getElementById('submit');
+	test.addEventListener("click",function(event)
+	{
+		event.preventDefault();
+	},false)
+</script>
+</body>
+</html>
