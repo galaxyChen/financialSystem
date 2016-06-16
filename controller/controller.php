@@ -27,6 +27,18 @@ function studentInfor($page)
 	echo json_encode($data);
 }
 
+function getList($page)
+{
+	$begin=($page-1)*15;
+	$end=$begin+15;
+	$sql['table']='income';
+	$sql['limit']=$begin.' '.$end;
+	$sql['order']='id';
+	$sql['order_d']=1;
+	$data=mysql_select($sql);
+	echo json_encode($data);
+}
+
 function oneStudent($id)
 {
 	$data=array();
@@ -275,7 +287,7 @@ if (isset($_GET['p']))
 		case 16:findClass($_GET['name']);break;//查询是否存在和名字匹配的班级
 		case 17:getMoney($_GET['id']);break;//根据学生id找缴费情况
 		case 18:getStandard($_GET['id']);break;//获取缴费标准
-		//case 19:getHsf($_GET['id']);break;//获取伙食费信息
+		case 19:getLIst($_GET['page']);break;//get basic income data
 		//case 20:getStandard($_GET['id']);break;//获取缴费标准
 	}
 }

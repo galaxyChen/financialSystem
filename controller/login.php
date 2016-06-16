@@ -1,16 +1,18 @@
 <?php
 session_start();
-include "model.php";
-	$sql=array();
-	$sql['table']='user';
-	$sql['where']='name';
-	$sql['value']=$_POST['username'];
-	$data=mysql_select($sql);
-	if ($data[0]['password']==$_POST['password'])
+if ($POST['p']==0&&$_SESSION['user']=='')
+{
+if ($_POST['password']=='admin')
 	{
-		$_SESSION['user']=$_POST['username'];
 		echo 1;
+		$_SESSION['user']='admin';
 	}
+else echo 0;
+}
+
+if ($_GET['p']==1)
+	if ($_SESSION['user']!='')
+		echo $_SESSION['user'];
 	else echo 0;
 
 

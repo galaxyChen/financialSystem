@@ -34,14 +34,14 @@ function createData(data)
 			text.appendTo("#s_detail");
 			document.getElementById(id).innerHTML=
 			"<td class=\"zero\"></td>"+
-			"<td class=\"first\" onclick=goDetail("+id+")>"+name+"</td><td class=\"second\"><p class=\'pclass\'>"+pclass+"</p></td>"+
-			"<td class=\"third\"><p class=\'pclass\'>"+status+"</p></td><td class=\"forth\">"+
+			"<td class=\"first\" onclick=goDetail("+id+")>"+name+"</td><td class=\"second\"><p class=\'pclass\'>"+money+"</p></td>"+
+			"<td class=\"third\"><p class=\'pclass\'>"+date+"</p></td><td class=\"forth\">"+
 			"<input type=\"checkbox\"  class=\"chose\"></td>";
 		}
 		
 }
 
-
+// te be editted
 function submitStudent(name)
 {
 	$.get("controller/controller.php?p=5&name="+name,function(data,status)
@@ -74,20 +74,7 @@ function name2()
 		}
 }
 
-function setSearch(data)
-{
-	var cla=JSON.parse(data);
-	var n=cla.length;
-	var i;
-	for (i=0;i<n;i++)
-	{
-		var text=$("<option></option>");
-		var id="class-"+cla[i]['id']
-		text.attr("id",id);
-		text.appendTo($("#sclass"));
-		document.getElementById(id).innerHTML=cla[i]['class_name'];
-	}
-}
+
 
 function page(p)
 {
@@ -143,35 +130,20 @@ function skip(now)
 
 window.onload=function()
 {
-	$.get("controller/controller.php?p=2&page=1",function(data,status)
-	{ createData(data); })
-	$.get("controller/controller.php?p=13",function(data,status)
+	$.get('controller/login.php?p=1',function(data)
 	{
-		setSearch(data);
-	$.get("controller/controller.php?p=12&table=student",function(data,status)
+		if (data==0)
+			window.location='index.html';
+	});
+	$.get("controller/controller.php?p=19&page=1",function(data,status)
+	{ createData(data); })
+	// $.get("controller/controller.php?p=13",function(data,status)
+	// {
+	// 	setSearch(data);
+	$.get("controller/controller.php?p=12&table=income",function(data,status)
 	{
 		setPage(data,1);        
 	})
-})
 }
 
 
-
-$(document).ready(
-	function()
-	{
-		$('#delete').click(function()
-		{
-			var chosedId="";
-			$(".chose").each(function()
-			{
-				if ($(this).is(":checked"))
-					chosedId+=$(this).parents("tr").attr("id")+" ";
-			})
-			$.post("controller/delete.php",{data:chosedId},function(data)
-				{
-					alert("删除成功！");
-					document.location.href="student.html";
-				});
-		})
-	})

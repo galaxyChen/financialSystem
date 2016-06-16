@@ -20,8 +20,8 @@
 			</div>
 		</div>
 		<div id='nav'>
-			<div class="navbox" ><a class="navtext" href="#">基本信息</a></div>
-			<div  class="navbox" id='now'><a class="navtext" href="student.html">学生管理</a><div id="nowLine"></div></div>
+			<div class="navbox" id='now'><a class="navtext" href="mini.html">收入明细</a><div id="nowLine"></div></div>
+			<div  class="navbox" ><a class="navtext" href="#">学生管理</a></div>
 			<div class="navbox"><a class="navtext" href="#">班级管理</a></div>
 			<div class="navbox"><a class="navtext" href="#">支出管理</a></div>
 			<div class="navbox"><a class="navtext" href="income.html">收入管理</a></div>
@@ -35,8 +35,8 @@
 						<img id='search_img' src="img/search.png" onclick="name1()">
 					</div>
 					<div id='s_button'>
-					<button id='add' class="s_button" onclick="goAdd()">添加学生</button>
-					<button id='delete'class='s_button' type="submit">删除学生</button>
+					<button id='add' class="s_button" onclick="goAdd()">添加收入</button>
+					<button id='delete'class='s_button' type="submit">删除收入</button>
 					</div>
 			</div>
 			<form method="post" action="controller/delete.php">
@@ -45,16 +45,10 @@
 			<td class='zero'></td>
 			<td class='first'>姓名</td>
 			<td class='second'>
-			<select id='sclass'>
-				<option value="all">班级</option>
-			</select>
+			money
 			</td>
 			<td class='third' id='smoney'>
-				<select>3
-				<option value="all">缴费</option>
-				<option value="1">已缴清</option>
-				<option value="2">未缴清</option>
-			</select>
+				date
 			</td>
 			<td class="forth"></td>
 			</tr>
@@ -78,6 +72,6 @@
 	</div>
 
 	<script src="js/jquery-1.12.0.min.js"></script>
-	<script src="js/student.js"></script>
+	<script src="js/mini.js"></script>
 </body>
 </html>

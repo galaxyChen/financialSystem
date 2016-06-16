@@ -12,11 +12,12 @@ function check()
 		$.post("controller/login.php",
 		{
 			username:username.value,
-			password:password.value
+			password:password.value,
+			p:0
 		}, function(data,status)
 		{
       		if (data==1)
-      			document.location.href="student.html";
+      			document.location.href="mini.html";
       		else alert("密码错误！")
 		})
 	}
